@@ -13,15 +13,12 @@ env GITHUB_COM_TOKEN=$(gh auth token) RENOVATE_TOKEN=$(gh auth token) LOG_LEVEL=
 ### Current behavior
 
 1. This project pins to the (at time of writing) latest commit hash on the HEAD branch for the following dependencies:
-  - [`github.com/elastic/cloud-on-k8s/v2`](https://pkg.go.dev/github.com/elastic/cloud-on-k8s/v2)
-    - Current Version: `v2.0.0-20250106074624-c4f5f812ea7c`
 
   - [`github.com/chrisnavar/renovate-go-bug-repro-module`](https://github.com/chrisnavar/renovate-go-bug-repro-module)
     - Current Version: `v1.0.1-0.20250701073539-59c769b1c4d2`
 
 2. Renovate runs in Lookup
-3. For the `cloud-on-k8s` dependency, Renovate gets correctly the `v2.16.1` and `v3.0.0` tags as update candidates.
-4. For the `renovate-go-bug-repro-module` dependency, as there's no tag (at time of writing) after the current version of the dependency, Renovate choose the latest commit as update candidate, but even though it sets the `newDigest` property correctly with the latest commit digest, it can't generate the pseudo-version correctly and says that the `newValue` property value is the same as the current version of the dependency. 
+3. For the `renovate-go-bug-repro-module` dependency, as there's no tag (at time of writing) after the current version of the dependency, Renovate choose the latest commit as update candidate, but even though it sets the `newDigest` property correctly with the latest commit digest, it can't generate the pseudo-version correctly and says that the `newValue` property value is the same as the current version of the dependency. 
 
 <details>
 
@@ -46,58 +43,11 @@ DEBUG: packageFiles with updates (repository=local)
                  "sourceUrl": "https://github.com/golang/go",
                  "registryUrl": "https://raw.githubusercontent.com/golang/website",
                  "homepage": "https://go.dev/",
-                 "mostRecentTimestamp": "2025-06-05T00:00:00.000Z",
+                 "mostRecentTimestamp": "2025-07-08T00:00:00.000Z",
                  "currentVersion": "1.24.4",
                  "currentVersionTimestamp": "2025-06-05T00:00:00.000Z",
-                 "currentVersionAgeInDays": 28,
+                 "currentVersionAgeInDays": 57,
                  "fixedVersion": "1.24.4"
-               },
-               {
-                 "datasource": "go",
-                 "depType": "require",
-                 "depName": "github.com/elastic/cloud-on-k8s/v2",
-                 "currentValue": "v2.0.0-20250106074624-c4f5f812ea7c",
-                 "currentDigest": "c4f5f812ea7c",
-                 "digestOneAndOnly": true,
-                 "versioning": "loose",
-                 "managerData": {"lineNumber": 4},
-                 "updates": [
-                   {
-                     "bucket": "non-major",
-                     "newVersion": "v2.16.1",
-                     "newValue": "v2.16.1",
-                     "newDigest": "1f74bdd90e8a0eb0f62df80edc2ae58d820e4e73",
-                     "releaseTimestamp": "2025-01-17T16:21:02.000Z",
-                     "newVersionAgeInDays": 166,
-                     "newMajor": 2,
-                     "newMinor": 16,
-                     "newPatch": 1,
-                     "updateType": "minor",
-                     "isBreaking": false,
-                     "branchName": "renovate/github.com-elastic-cloud-on-k8s-v2-2.x"
-                   },
-                   {
-                     "bucket": "major",
-                     "newVersion": "v3.0.0",
-                     "newValue": "v3.0.0",
-                     "newDigest": "89a41511a4bc8fdb4770cf1da60c37b8b8232b6d",
-                     "releaseTimestamp": "2025-04-07T13:53:39.000Z",
-                     "newVersionAgeInDays": 86,
-                     "newMajor": 3,
-                     "newMinor": 0,
-                     "newPatch": 0,
-                     "updateType": "major",
-                     "isBreaking": true,
-                     "branchName": "renovate/github.com-elastic-cloud-on-k8s-v2-3.x"
-                   }
-                 ],
-                 "packageName": "github.com/elastic/cloud-on-k8s/v2",
-                 "warnings": [],
-                 "sourceUrl": "https://github.com/elastic/cloud-on-k8s",
-                 "mostRecentTimestamp": "2025-04-07T13:53:39.000Z",
-                 "currentVersion": "v2.0.0-20250106074624-c4f5f812ea7c",
-                 "isSingleVersion": true,
-                 "fixedVersion": "v2.0.0-20250106074624-c4f5f812ea7c"
                },
                {
                  "datasource": "go",
@@ -107,7 +57,7 @@ DEBUG: packageFiles with updates (repository=local)
                  "currentDigest": "59c769b1c4d2",
                  "digestOneAndOnly": true,
                  "versioning": "loose",
-                 "managerData": {"lineNumber": 6},
+                 "managerData": {"lineNumber": 4},
                  "updates": [
                    {
                      "updateType": "digest",
