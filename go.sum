@@ -2,3 +2,5 @@ github.com/chrisnavar/renovate-go-bug-repro-module v1.0.1-0.20250701073539-59c76
 github.com/chrisnavar/renovate-go-bug-repro-module v1.0.1-0.20250701073539-59c769b1c4d2/go.mod h1:PpJBKYs+prMcdp6yN22xvRNxkJcZDRfVAuM2t32BH2M=
 github.com/elastic/cloud-on-k8s/v2 v2.0.0-20250106074624-c4f5f812ea7c h1:MjlU03jNJ/mU0wfP8qlzbH4cyU+kpEG8+2Fmbh6zOE0=
 github.com/elastic/cloud-on-k8s/v2 v2.0.0-20250106074624-c4f5f812ea7c/go.mod h1:R24wv2L29/zbNmUpjyjx0ZEhRNUDvhyC9L8s5mljZNk=
+github.com/elastic/cloud-on-k8s/v2 v2.16.1 h1:u1VSUsfj/I8I3mIhoFKGirON2TgonhU4Wq+x2qqD9hQ=
+github.com/elastic/cloud-on-k8s/v2 v2.16.1/go.mod h1:Yg1Wdci5RJsY5NNbQaXq/3a28qk8100NBDaYtd0GH+Q=
