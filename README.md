@@ -86,6 +86,48 @@ DEBUG: packageFiles with updates (repository=local)
 
 - Renovate will set the `newValue` property value correctly with the expected pseudo-version of the latest commit.
 
+As we can see in the debug logs printed above, the `currentValue` is equals to `newValue`:
+
+```diff
+...
+-"currentValue": "v1.0.1-0.20250701073539-59c769b1c4d2",
+"currentDigest": "59c769b1c4d2",
+"digestOneAndOnly": true,
+"versioning": "loose",
+"managerData": {"lineNumber": 4},
+"updates": [
+  {
+    "updateType": "digest",
+-    "newValue": "v1.0.1-0.20250701073539-59c769b1c4d2",
+    "newDigest": "0597bbde9c98a33e304ab7869a0fd9000463573a",
+    "branchName": "renovate/github.com-chrisnavar-renovate-go-bug-repro-module-digest"
+  }
+],
+...
+```
+
+The expected output would be the following, where the `currentValue` is different from `newValue`:
+
+```diff
+...
++"currentValue": "v1.0.1-0.20250701073539-59c769b1c4d2",
+"currentDigest": "59c769b1c4d2",
+"digestOneAndOnly": true,
+"versioning": "loose",
+"managerData": {"lineNumber": 4},
+"updates": [
+  {
+    "updateType": "digest",
++    "newValue": "v1.0.1-0.20250701073617-0597bbde9c98",
+    "newDigest": "0597bbde9c98a33e304ab7869a0fd9000463573a",
+    "branchName": "renovate/github.com-chrisnavar-renovate-go-bug-repro-module-digest"
+  }
+],
+...
+```
+
+This problem only happens in log output, but does not get reflected on PRs created by Renovatebot https://github.com/chrisnavar/renovate-repro-gomod-pinning-digest/pull/7/files as here in the `go.mod` file the correct pseudo-version of the Go package is generated.
+
 ## Link to the Renovate issue or Discussion
 
 [Renovate `#36798`](https://github.com/renovatebot/renovate/discussions/36798)
