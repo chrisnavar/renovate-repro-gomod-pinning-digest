@@ -1,2 +1,3 @@
 github.com/chrisnavar/renovate-go-bug-repro-module v1.0.1-0.20250701073539-59c769b1c4d2 h1:xRJlPjqbPGVDlgC0AORGQMnGVWTD21ZyQzYPXQWVObE=
 github.com/chrisnavar/renovate-go-bug-repro-module v1.0.1-0.20250701073539-59c769b1c4d2/go.mod h1:PpJBKYs+prMcdp6yN22xvRNxkJcZDRfVAuM2t32BH2M=
+github.com/chrisnavar/renovate-go-bug-repro-module v1.0.1-0.20250701073617-0597bbde9c98/go.mod h1:PpJBKYs+prMcdp6yN22xvRNxkJcZDRfVAuM2t32BH2M=
